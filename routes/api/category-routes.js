@@ -64,10 +64,37 @@ router.post("/", async (req, res) => {
 
 router.put("/:id", async (req, res) => {
   // update a category by its `id` value
+  try {
+    const CategoryRes = await Category.update({category_name: req.body.category_name},{where: {id:req.params.id}});
+    if (!CategoryRes)   {
+        res.status(404).json({ message: 'Unable to find categories with this id!' });
+        return;
+    }
+
+    res.json(CategoryRes);
+}
+
+catch (error) {
+    res.status(400).json(error);
+}
 });
 
 router.delete("/:id", async (req, res) => {
   // delete a category by its `id` value
+  try {
+    const categoryRes = await Category.destroy({where: {id:req.params.id}});
+
+    if (!categoryRes) {
+        res.status(404).json({ message: 'Unable to find categories with this id!' });
+        return;
+    }
+
+    res.status(200).json(categoryRes);
+    
+} 
+catch (error) {
+    res.status(500).json(error);
+}
 });
 
 module.exports = router;
