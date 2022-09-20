@@ -26,7 +26,7 @@ Below is a link to my demo video:
 ## Installation
 The user would need to install Node, the following link describes how to do so: https://nodejs.dev/en/learn/how-to-install-nodejs <br> After installing Node they will then have to install the required packages and they can do so by using the command "npm i" in the terminal.
 ## Usage
-To use my application the user will have to open the terminal from the db folder and log into MySQL by typing in `mysql -u root -p`. Once logged in they will run the schema file using `SOURCE schema.sql`, once complete they will type in `quit` and will exit MySQL. Thay will then run `npm seed` and `npm start`, in order. Once they see that the port is listening they can use Insomnia, Postman or any other site that they desire to test the backend routes. 
+To use my application the user will have to customize the .env file with their information and then open the terminal from the db folder and log into MySQL by typing in `mysql -u root -p`. Once logged in they will run the schema file using `SOURCE schema.sql`, once complete they will type in `quit` and will exit MySQL. Thay will then run `npm seed` and `npm start`, in order. Once they see that the port is listening they can use Insomnia, Postman or any other site that they desire to test the backend routes. 
 Thank you for using my app!
 ## Contribution
 - Denver University Staff
